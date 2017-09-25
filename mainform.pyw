@@ -34,7 +34,7 @@ class MainWindow(QMainWindow):
         self.ui.lineEdit_rub.setValidator(QDoubleValidator(0.0, 9999999.99, 2))
 
     def inputrubslot(self, text):
-        if text='':
+        if text == '':
             return
         dollars = str('{:.2f}'.format(float(text) / self.rate_dollars))
         yuans = str('{:.2f}'.format(float(text) / self.rate_yuan))
@@ -42,7 +42,7 @@ class MainWindow(QMainWindow):
         self.ui.lineEdit_yuan.setText(yuans)
 
     def inputyuanslot(self, text):
-        if text='':
+        if text == '':
             return
         dollars = str('{:.2f}'.format(float(text) * self.rate_yuan / self.rate_dollars))
         rubles = str('{:.2f}'.format(float(text) * self.rate_yuan))
@@ -50,7 +50,7 @@ class MainWindow(QMainWindow):
         self.ui.lineEdit_rub.setText(rubles)
 
     def inputdollarslot(self, text):
-        if text='':
+        if text == '':
             return
         yuans = str('{:.2f}'.format(float(text) * self.rate_dollars / self.rate_yuan))
         rubles = str('{:.2f}'.format(float(text) * self.rate_dollars))
