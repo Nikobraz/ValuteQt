@@ -1,8 +1,4 @@
 # -*- coding: utf-8 -*-
-import csv
-import os
-import time
-import sys
 import urllib.request
 import datetime
 from xml.etree import ElementTree as ET
