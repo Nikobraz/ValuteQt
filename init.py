@@ -10,7 +10,7 @@ def get_exchange_rate():
     id_dollar = "R01235"
     id_evro = "R01239"
     id_yuan = "R01375"
-    valuta = ET.parse(urllib.request.urlopen("http://www.cbr.ru/scripts/XML_daily.asp?date_req"))
+    valuta = ET.parse(urllib.request.urlopen("http://www.cbr.ru/scripts/XML_daily.asp"))
 
     for line in valuta.findall('Valute'):
         id_v = line.get('ID')
